@@ -1,4 +1,4 @@
-module github.com/thenabilarta/entity
+module entity
 
 go 1.21.1
 
