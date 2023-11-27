@@ -14,6 +14,7 @@ type Answer struct {
 	UserId       uuid.UUID  `json:"-" gorm:"column:userId"`
 	User         *User      `json:"user" gorm:"foreignKey:userId"`
 	QuestionId   uuid.UUID  `json:"questionId" gorm:"column:questionId"`
+	Question     *Question  `json:"question" gorm:"foreignKey:questionId"`
 	Comment      *[]Comment `json:"comment" gorm:"foreignKey:answerId"`
 	IsShow       bool       `json:"-" gorm:"column:isShow;default:true"`
 	BaseEntity
