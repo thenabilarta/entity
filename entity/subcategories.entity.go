@@ -9,6 +9,7 @@ type Subcategory struct {
 	Id         uuid.UUID     `json:"id" gorm:"column:id"`
 	Name       string        `json:"name" gorm:"column:name"`
 	CategoryId uuid.NullUUID `json:"categoryId" gorm:"column:categoryId"`
+	PriceRange string        `json:"priceRange" gorm:"column:priceRange"`
 	ImageUrl   string        `json:"imageUrl" gorm:"column:imageUrl"`
 	IsShow     bool          `json:"-" gorm:"column:isShow;default:true"`
 	BaseEntity
