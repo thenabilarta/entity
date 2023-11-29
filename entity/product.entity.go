@@ -23,6 +23,7 @@ type Product struct {
 	SubcategoryId uuid.UUID   `json:"subcategoryId" gorm:"column:subcategoryId"`
 	ProfessionId  uuid.UUID   `json:"professionId" gorm:"column:professionId"`
 	IsShow        bool        `json:"isShow" gorm:"column:isShow;default:true"`
+	Active        bool        `json:"active" gorm:"column:active`
 	BaseEntity
 }
 
