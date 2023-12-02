@@ -21,6 +21,12 @@ type User struct {
 	BaseEntity
 }
 
+type UserConsultantProfile struct {
+	Id         uuid.UUID `json:"id" gorm:"column:id"`
+	Name       string    `json:"name" gorm:"column:name"`
+	ProfilePic string    `json:"profilePic" gorm:"column:profilePic"`
+}
+
 func (e *User) BeforeCreate(tx *gorm.DB) (err error) {
 	e.Id = uuid.New()
 	return
