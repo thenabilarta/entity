@@ -11,12 +11,12 @@ type Answer struct {
 	Likes        int64                  `json:"likes" gorm:"column:likes"`
 	TotalComment int64                  `json:"totalComments" gorm:"column:totalComments"`
 	Tag          string                 `json:"tag" gorm:"column:tag"`
-	UserId       uuid.UUID              `json:"-" gorm:"column:userId"`
+	UserId       uuid.UUID              `json:"userId" gorm:"column:userId"`
 	User         *UserConsultantProfile `json:"user" gorm:"foreignKey:userId"`
 	QuestionId   uuid.UUID              `json:"questionId" gorm:"column:questionId"`
 	Question     *Question              `json:"question" gorm:"foreignKey:questionId"`
 	Comment      *[]Comment             `json:"comment" gorm:"foreignKey:answerId"`
-	IsShow       bool                   `json:"-" gorm:"column:isShow;default:true"`
+	IsShow       bool                   `json:"isShow" gorm:"column:isShow;default:true"`
 	BaseEntity
 }
 
