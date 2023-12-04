@@ -25,6 +25,7 @@ type UserConsultantProfile struct {
 	Id         uuid.UUID `json:"id" gorm:"column:id"`
 	Name       string    `json:"name" gorm:"column:name"`
 	ProfilePic string    `json:"profilePic" gorm:"column:profilePic"`
+	Role       UserRole  `json:"role" gorm:"column:role"`
 }
 
 func (e *User) BeforeCreate(tx *gorm.DB) (err error) {
