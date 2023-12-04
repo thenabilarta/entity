@@ -11,7 +11,7 @@ type Question struct {
 	Likes       int64     `json:"likes" gorm:"column:likes"`
 	TotalAnswer int64     `json:"totalAnswer" gorm:"column:totalAnswer"`
 	Tag         string    `json:"tag" gorm:"column:tag"`
-	UserId      uuid.UUID `json:"-" gorm:"column:userId"`
+	UserId      uuid.UUID `json:"userId" gorm:"column:userId"`
 	User        *User     `json:"user" gorm:"foreignKey:userId"`
 	Answer      *[]Answer `json:"answer" gorm:"foreignKey:questionId"`
 	IsShow      bool      `json:"-" gorm:"column:isShow;default:true"`
