@@ -7,10 +7,10 @@ import (
 
 type Notification struct {
 	Id             uuid.UUID      `json:"id" gorm:"column:id"`
-	UserId         uuid.NullUUID  `json:"userId" gorm:"column:userId"`
-	ToUserId       uuid.NullUUID  `json:"toUserId" gorm:"column:toUserId"`
+	UserId         string         `json:"userId" gorm:"column:userId"`
+	ToUserId       string         `json:"toUserId" gorm:"column:toUserId"`
 	NotifationType NotifationType `json:"notificationType" gorm:"column:notificationType"`
-	ItemId         uuid.NullUUID  `json:"itemId" gorm:"column:itemId"`
+	ItemId         string         `json:"itemId" gorm:"column:itemId"`
 	ItemType       ItemType       `json:"itemType" gorm:"column:itemType"`
 	Title          string         `json:"title" gorm:"column:title"`
 	Message        string         `json:"message" gorm:"column:message"`
