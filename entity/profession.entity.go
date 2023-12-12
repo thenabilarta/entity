@@ -8,8 +8,8 @@ import (
 type Profession struct {
 	Id            uuid.UUID        `json:"id" gorm:"column:id"`
 	UserId        uuid.UUID        `json:"userId" gorm:"column:userId"`
-	CategoryId    uuid.UUID        `json:"-" gorm:"column:categoryId"`
-	SubCategoryId uuid.UUID        `json:"-" gorm:"column:subcategoryId"`
+	CategoryId    uuid.UUID        `json:"categoryId" gorm:"column:categoryId"`
+	SubCategoryId uuid.UUID        `json:"subcategoryId" gorm:"column:subcategoryId"`
 	Category      *Category        `json:"category" gorm:"foreignKey:categoryId"`
 	Subcategory   *Subcategory     `json:"subcategory" gorm:"foreignKey:subcategoryId"`
 	ProofMediaUrl string           `json:"proofMediaUrl" gorm:"column:proofMediaUrl"`
