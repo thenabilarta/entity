@@ -6,25 +6,26 @@ import (
 )
 
 type Product struct {
-	Id            uuid.UUID    `json:"id" gorm:"column:id"`
-	Title         string       `json:"title" gorm:"column:title"`
-	Description   string       `json:"description" gorm:"column:description"`
-	ImageUrl      string       `json:"imageUrl" gorm:"column:imageUrl"`
-	Price         int64        `json:"price" gorm:"column:price"`
-	Duration      int64        `json:"duration" gorm:"column:duration"`
-	TotalSold     int64        `json:"totalSold" gorm:"column:totalSold"`
-	Likes         int64        `json:"likes" gorm:"column:likes"`
-	Views         int64        `json:"views" gorm:"column:views"`
-	Rating        float64      `json:"rating" gorm:"column:rating"`
-	Tag           string       `json:"tag" gorm:"column:tag"`
-	Schedule      *[]Schedule  `json:"schedule" gorm:"foreignKey:productId"`
-	OrderItem     *[]OrderItem `json:"orderItem" gorm:"foreignKey:productId"`
-	UserId        uuid.UUID    `json:"userId" gorm:"column:userId"`
-	CategoryId    uuid.UUID    `json:"categoryId" gorm:"column:categoryId"`
-	SubcategoryId uuid.UUID    `json:"subcategoryId" gorm:"column:subcategoryId"`
-	ProfessionId  uuid.UUID    `json:"professionId" gorm:"column:professionId"`
-	IsShow        bool         `json:"isShow" gorm:"column:isShow"`
-	Active        bool         `json:"active" gorm:"column:active"`
+	Id           uuid.UUID    `json:"id" gorm:"column:id"`
+	Title        string       `json:"title" gorm:"column:title"`
+	Description  string       `json:"description" gorm:"column:description"`
+	ImageUrl     string       `json:"imageUrl" gorm:"column:imageUrl"`
+	Price        int64        `json:"price" gorm:"column:price"`
+	Duration     int64        `json:"duration" gorm:"column:duration"`
+	TotalSold    int64        `json:"totalSold" gorm:"column:totalSold"`
+	Likes        int64        `json:"likes" gorm:"column:likes"`
+	Views        int64        `json:"views" gorm:"column:views"`
+	Rating       float64      `json:"rating" gorm:"column:rating"`
+	Tag          string       `json:"tag" gorm:"column:tag"`
+	Schedule     *[]Schedule  `json:"schedule" gorm:"foreignKey:productId"`
+	OrderItem    *[]OrderItem `json:"orderItem" gorm:"foreignKey:productId"`
+	UserId       uuid.UUID    `json:"userId" gorm:"column:userId"`
+	CategoryId   uuid.UUID    `json:"categoryId" gorm:"column:categoryId"`
+	Category     *Category    `json:"category"`
+	Subcategory  *Subcategory `json:"subcategory"`
+	ProfessionId uuid.UUID    `json:"professionId" gorm:"column:professionId"`
+	IsShow       bool         `json:"isShow" gorm:"column:isShow"`
+	Active       bool         `json:"active" gorm:"column:active"`
 	BaseEntity
 }
 
