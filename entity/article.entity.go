@@ -18,6 +18,8 @@ type Article struct {
 	CategoryId    uuid.UUID         `json:"categoryId" gorm:"column:categoryId"`
 	SubcategoryId uuid.UUID         `json:"subcategoryId" gorm:"column:subcategoryId"`
 	Comment       *[]ArticleComment `json:"comment" gorm:"foreignKey:articleId"`
+	Category      Category          `json:"category" gorm:"foreignKey:categoryId"`
+	Subcategory   Subcategory       `json:"subcategory" gorm:"foreignKey:subcategoryId"`
 	MediaUrl      string            `json:"mediaUrl" gorm:"column:mediaUrl"`
 	IsShow        bool              `json:"-" gorm:"column:isShow;default:true"`
 	BaseEntity
