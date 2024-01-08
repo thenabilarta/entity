@@ -10,7 +10,6 @@ type Report struct {
 	ConsultantId uuid.UUID        `json:"consultantId" gorm:"column:consultantId"`
 	CustomerId   uuid.UUID        `json:"customerId" gorm:"column:customerId"`
 	OrderItemId  uuid.UUID        `json:"orderItemId" gorm:"column:orderItemId"`
-	Value        int              `json:"value" gorm:"column:value"`
 	Title        string           `json:"title" gorm:"column:title"`
 	Description  string           `json:"description" gorm:"column:description"`
 	ImageUrl     string           `json:"imageUrl" gorm:"column:imageUrl"`
