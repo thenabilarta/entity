@@ -6,15 +6,19 @@ import (
 )
 
 type Report struct {
-	Id           uuid.UUID        `json:"id" gorm:"column:id"`
-	ConsultantId uuid.UUID        `json:"consultantId" gorm:"column:consultantId"`
-	CustomerId   uuid.UUID        `json:"customerId" gorm:"column:customerId"`
-	OrderItemId  uuid.UUID        `json:"orderItemId" gorm:"column:orderItemId"`
-	Title        string           `json:"title" gorm:"column:title"`
-	Description  string           `json:"description" gorm:"column:description"`
-	ImageUrl     string           `json:"imageUrl" gorm:"column:imageUrl"`
-	Status       ReportStatus     `json:"status" gorm:"column:status"`
-	Resolution   ReportResolution `json:"resolution" gorm:"column:resolution"`
+	Id                            uuid.UUID        `json:"id" gorm:"column:id"`
+	ConsultantId                  uuid.UUID        `json:"consultantId" gorm:"column:consultantId"`
+	CustomerId                    uuid.UUID        `json:"customerId" gorm:"column:customerId"`
+	OrderItemId                   uuid.UUID        `json:"orderItemId" gorm:"column:orderItemId"`
+	Title                         string           `json:"title" gorm:"column:title"`
+	Description                   string           `json:"description" gorm:"column:description"`
+	ConsultantResponseTitle       string           `json:"consultantResponseTitle" gorm:"column:consultantResponseTitle"`
+	ConsultantResponseDescription string           `json:"consultantResponseDescription" gorm:"column:consultantResponseTitle"`
+	AdminResponseTitle            string           `json:"adminResponseTitle" gorm:"column:adminResponseTitle"`
+	AdminResponseDescription      string           `json:"adminResponseDescription" gorm:"column:adminResponseDescription"`
+	ImageUrl                      string           `json:"imageUrl" gorm:"column:imageUrl"`
+	Status                        ReportStatus     `json:"status" gorm:"column:status"`
+	Resolution                    ReportResolution `json:"resolution" gorm:"column:resolution"`
 	BaseEntity
 }
 
