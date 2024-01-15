@@ -26,15 +26,16 @@ type OrderItem struct {
 type OrderStatus string
 
 const (
-	ORDER_STATUS_ON_WAITING_FOR_PAYMENT  OrderStatus = "ON_WAITING_FOR_PAYMENT"
-	ORDER_STATUS_ON_WAITING_CONFIRMATION OrderStatus = "ON_WAITING_CONFIRMATION"
-	ORDER_STATUS_ON_SCHEDULE             OrderStatus = "ON_SCHEDULE"
-	ORDER_STATUS_ON_GOING                OrderStatus = "ON_GOING"
-	ORDER_STATUS_ON_REVIEW               OrderStatus = "ON_REVIEW"
-	ORDER_STATUS_ON_REPORTED             OrderStatus = "ON_REPORTED"
-	ORDER_STATUS_COMPLETED               OrderStatus = "COMPLETED"
-	ORDER_STATUS_CANCELED                OrderStatus = "CANCELED"
-	ORDER_STATUS_REFUNDED                OrderStatus = "REFUNDED"
+	ORDER_STATUS_ON_WAITING_FOR_PAYMENT              OrderStatus = "ON_WAITING_FOR_PAYMENT"
+	ORDER_STATUS_ON_WAITING_CONFIRMATION             OrderStatus = "ON_WAITING_CONFIRMATION"
+	ORDER_STATUS_ON_SCHEDULE                         OrderStatus = "ON_SCHEDULE"
+	ORDER_STATUS_ON_GOING                            OrderStatus = "ON_GOING"
+	ORDER_STATUS_ON_REVIEW                           OrderStatus = "ON_REVIEW"
+	ORDER_STATUS_ON_REPORTED_PROCESSED_BY_CONSULTANT OrderStatus = "ON_REPORTED_PROCESSED_BY_CONSULTANT"
+	ORDER_STATUS_ON_REPORTED_PROCESSED_BY_ADMIN      OrderStatus = "ON_REPORTED_PROCESSED_BY_ADMIN"
+	ORDER_STATUS_COMPLETED                           OrderStatus = "COMPLETED"
+	ORDER_STATUS_CANCELED                            OrderStatus = "CANCELED"
+	ORDER_STATUS_REFUNDED                            OrderStatus = "REFUNDED"
 )
 
 type PaymentMethod string
