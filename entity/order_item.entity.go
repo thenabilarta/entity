@@ -16,6 +16,7 @@ type OrderItem struct {
 	Starttime     int64         `json:"starttime" gorm:"column:starttime"`
 	Endtime       int64         `json:"endtime" gorm:"column:endtime"`
 	TotalPrice    int64         `json:"totalPrice" gorm:"column:totalPrice"`
+	ReviewScore   int           `json:"reviewScore" gorm:"column:reviewScore"`
 	Product       *Product      `json:"product" gorm:"foreignKey:productId"`
 	Status        OrderStatus   `json:"status" gorm:"column:status"`
 	PaymentMethod PaymentMethod `json:"paymentMethod" gorm:"column:paymentMethod"`
