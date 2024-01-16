@@ -13,7 +13,7 @@ type Report struct {
 	Title                         string           `json:"title" gorm:"column:title"`
 	Description                   string           `json:"description" gorm:"column:description"`
 	ConsultantResponseTitle       string           `json:"consultantResponseTitle" gorm:"column:consultantResponseTitle"`
-	ConsultantResponseDescription string           `json:"consultantResponseDescription" gorm:"column:consultantResponseTitle"`
+	ConsultantResponseDescription string           `json:"consultantResponseDescription" gorm:"column:consultantResponseDescription"`
 	AdminResponseTitle            string           `json:"adminResponseTitle" gorm:"column:adminResponseTitle"`
 	AdminResponseDescription      string           `json:"adminResponseDescription" gorm:"column:adminResponseDescription"`
 	ImageUrl                      string           `json:"imageUrl" gorm:"column:imageUrl"`
