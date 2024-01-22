@@ -7,7 +7,7 @@ import (
 )
 
 type BaseEntity struct {
-	CreatedAt int64 `json:"createdAt" gorm:"column:createdAt;autoUpdateTime:milli"`
+	CreatedAt int64 `json:"createdAt" gorm:"column:createdAt;"`
 	UpdatedAt int64 `json:"updatedAt" gorm:"column:updatedAt;autoUpdateTime:milli"`
 	DeletedAt int64 `json:"-" gorm:"column:deletedAt;index;default:null"`
 }
