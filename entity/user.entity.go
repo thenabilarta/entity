@@ -17,8 +17,8 @@ type User struct {
 	ProfilePic     string    `json:"profilePic" gorm:"column:profilePic"`
 	OnlineStatus   bool      `json:"onlineStatus" gorm:"column:onlineStatus"`
 	Status         bool      `json:"status" gorm:"column:status"`
-	EmailVerified  bool      `json:"emailVerified" gorm:"column:emailVerified"`
-	PhoneVerified  bool      `json:"phoneVerified" gorm:"column:EmailVerified"`
+	EmailVerified  int64     `json:"emailVerified" gorm:"column:emailVerified"`
+	PhoneVerified  int64     `json:"phoneVerified" gorm:"column:EmailVerified"`
 	Active         bool      `json:"active" gorm:"column:active"`
 	BaseEntity
 }
