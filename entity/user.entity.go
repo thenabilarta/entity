@@ -18,7 +18,7 @@ type User struct {
 	OnlineStatus   bool      `json:"onlineStatus" gorm:"column:onlineStatus"`
 	Status         bool      `json:"status" gorm:"column:status"`
 	EmailVerified  int64     `json:"emailVerified" gorm:"column:emailVerified"`
-	PhoneVerified  int64     `json:"phoneVerified" gorm:"column:EmailVerified"`
+	PhoneVerified  int64     `json:"phoneVerified" gorm:"column:phoneVerified"`
 	Active         bool      `json:"active" gorm:"column:active"`
 	BaseEntity
 }
